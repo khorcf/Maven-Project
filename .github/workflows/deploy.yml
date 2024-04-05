@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: cf-deployment
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: my-cf
+  template:
+    metadata:
+      labels:
+        app: my-cf
+    spec:
+      containers:
+      - name: my-image
+        image: khorcf/intel:latest
+        ports:
+        - containerPort: 8080
