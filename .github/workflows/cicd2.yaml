@@ -34,5 +34,5 @@ jobs:
           password: ${{ secrets.DOCKERHUB_TOKEN }}
       - name: Push Image to dockerhub
         run: |
-          docker tag myapp:latest khorcf/intel:latest
+          docker tag myapp_cf:latest khorcf/intel:latest
           docker push khorcf/intel:latest
