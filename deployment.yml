@@ -1,16 +1,16 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: cf-deployment
+  name: cf-deployment2
 spec:
   replicas: 2
   selector:
     matchLabels:
-      app: my-cf
+      app: my-cf2
   template:
     metadata:
       labels:
-        app: my-cf
+        app: my-cf2
     spec:
       containers:
       - name: my-image
